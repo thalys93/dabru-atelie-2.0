@@ -10,9 +10,9 @@ export function About() {
     <Container>
       <Row>
         <Col sm>
-          <section className="prose-lg lg:prose-lg mt-10 pb-28 lg:mt-0 lg:mb-0 lg:pb-0">
+          <section className="prose-lg lg:prose-lg mt-10 pb-28 lg:mt-0 lg:mb-0 lg:pb-0 animate__animated animate__fadeIn animate__slow">
             <div className="flex flex-col justify-center items-center select-none lg:select-text">
-              <Figure className="hover:scale-90 transition-all duration-200">
+              <Figure className="hover:scale-90 transition-all duration-200 animate__animated animate__fadeInUp animate__slower animate__delay-2s ">
                 <Figure.Image
                 src={userProfileLink}
                 roundedCircle
@@ -25,7 +25,7 @@ export function About() {
                 </Figure.Caption>
               </Figure>
             </div>
-            <div className="flex flex-col gap-0 justify-center items-center rounded flex-wrap">
+            <div className="flex flex-col gap-0 justify-center items-center rounded flex-wrap animate__animated animate__fadeInUp animate__slower">
               <h3 className="font-abel text-PJwhite font-regular select-none lg:select-text bg-gray rounded-lg lg:w-7/12 p-2">
                 <b className={boldClass}>Artesã</b> apaixonada por transformar fios de malha em <b className={boldClass}>bolsas e itens</b> de decoração únicos e charmosos. <br />
                 Comecei como um <b className={boldClass}>hobby</b>, mas minha paixão me levou a criar um negócio <br />

@@ -7,7 +7,7 @@ function Home() {
     <Container>
       <Row>
         <Col sm>
-          <section className="prose-lg lg:prose-lg mt-16 pb-28 lg:mt-28 lg:mb-0">
+          <section className="prose-lg lg:prose-lg mt-16 pb-28 lg:mt-28 lg:mb-0 animate__animated animate__fadeIn">
             <div className="flex flex-col justify-center items-center select-none">
               <h1 className="font-bebas text-gray font-light"> Dabru <br /> Ateliê </h1>
               <div className="line"></div>

@@ -2,100 +2,134 @@ export const productData = [
     {
         "id": 1,
         "nome": "Bolsa de Malha Artesanal Pequena",
+        "resume": "Bolsa Artesanal Pequena",
         "valor": 50.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805506/dabru-atelie/dabruatelie_1706805507087_vat7gx.jpg",
         "sobre": "Uma bolsa pequena feita à mão com malha artesanal.",
-        "tipo": "Artesanal"
+        "tipo": "Artesanal",
+        "descricao": "Esta encantadora bolsa artesanal é perfeita para quem busca estilo e originalidade. Feita à mão com malha artesanal de alta qualidade, cada bolsa é única e reflete o trabalho artístico de seu artesão. Além de ser uma escolha elegante, esta bolsa é uma declaração de apoio ao artesanato tradicional.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 2,
-        "nome": "Bolsa de Malha Feita à Mão Média",
+        "nome": "Bolsa de Malha Feita à Mão Média",  
+        "resume": "Bolsa Feita à Mão Média",      
         "valor": 70.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805509/dabru-atelie/dabruatelie_1706805503217_e8xc98.jpg",
         "sobre": "Uma bolsa média feita à mão com malha de alta qualidade.",
-        "tipo": "Feita à Mão"
+        "tipo": "Feita à Mão",
+        "descricao": "Esta deslumbrante bolsa média é uma peça única que combina estilo e artesanato. Feita à mão com malha de alta qualidade, cada detalhe é cuidadosamente trabalhado para garantir durabilidade e elegância. Perfeita para quem busca uma bolsa que seja tão funcional quanto bonita.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 3,
         "nome": "Bolsa de Malha Ecológica",
+        "resume": "Bolsa Ecológica",
         "valor": 60.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805504/dabru-atelie/dabruatelie_1706805520066_vup0lu.jpg",
         "sobre": "Uma bolsa ecológica feita com malha sustentável.",
-        "tipo": "Ecológica"
+        "tipo": "Ecológica",
+        "descricao": "Esta bolsa ecológica é mais do que apenas uma peça de moda; é um símbolo de compromisso com a sustentabilidade. Feita com malha sustentável de alta qualidade, esta bolsa é uma escolha consciente para quem se preocupa com o meio ambiente. Além disso, seu design elegante e versátil a torna perfeita para qualquer ocasião.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 4,
         "nome": "Bolsa de Malha Colorida",
+        "resume": "Bolsa Colorida",
         "valor": 55.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805503/dabru-atelie/dabruatelie_1706805517927_f7hspm.jpg",
         "sobre": "Uma bolsa colorida com design único feita de malha.",
-        "tipo": "Colorida"
+        "tipo": "Colorida",
+        "descricao": "Esta vibrante bolsa colorida é uma explosão de alegria e estilo. Com seu design único e malha de alta qualidade, ela é perfeita para adicionar um toque de cor e vivacidade ao seu visual. Seja para um passeio descontraído ou uma saída à noite, esta bolsa certamente chamará a atenção.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 5,
         "nome": "Bolsa de Malha Artesanal Grande",
+        "resume": "Bolsa Artesanal Grande",
         "valor": 80.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805502/dabru-atelie/dabruatelie_1706805526313_gumknv.jpg",
         "sobre": "Uma bolsa grande com detalhes artesanais em malha.",
-        "tipo": "Artesanal"
+        "tipo": "Artesanal",
+        "descricao": "Esta deslumbrante bolsa artesanal grande é uma verdadeira declaração de estilo. Com seus detalhes artesanais e malha de alta qualidade, ela é espaçosa o suficiente para acomodar todos os seus itens essenciais com elegância. Seja para o trabalho ou lazer, esta bolsa irá impressionar.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 6,
         "nome": "Bolsa de Malha Feita à Mão Pequena",
+        "resume": "Bolsa Feita à Mão Pequena",
         "valor": 45.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805500/dabru-atelie/dabruatelie_1706805475976_r0s43d.jpg",
         "sobre": "Uma bolsa pequena feita à mão com malha de qualidade.",
-        "tipo": "Feita à Mão"
+        "tipo": "Feita à Mão",
+        "descricao": "Esta encantadora bolsa pequena é uma peça única que combina estilo e artesanato. Feita à mão com malha de alta qualidade, cada detalhe é cuidadosamente trabalhado para garantir durabilidade e elegância. Perfeita para quem busca uma bolsa que seja tão funcional quanto bonita.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+
     },
     {
         "id": 7,
         "nome": "Bolsa de Malha Vintage",
+        "resume": "Bolsa Vintage",
         "valor": 65.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805499/dabru-atelie/dabruatelie_1706805465281_hkkezi.jpg",
         "sobre": "Uma bolsa vintage com estilo clássico em malha.",
-        "tipo": "Vintage"
+        "tipo": "Vintage",
+        "descricao": "Esta bolsa vintage é uma peça atemporal que combina estilo e elegância. Com seu design clássico e malha de alta qualidade, ela é perfeita para quem busca um toque de sofisticação. Seja para um evento formal ou casual, esta bolsa certamente fará uma declaração de estilo.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 8,
         "nome": "Bolsa de Malha com Detalhes em Couro",
+        "resume": "Bolsa com Detalhes em Couro",
         "valor": 75.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805498/dabru-atelie/dabruatelie_1706805327304_rwcira.jpg",
         "sobre": "Uma bolsa elegante com detalhes em couro e malha.",
-        "tipo": "Couro"
+        "tipo": "Couro",
+        "descricao": "Esta elegante bolsa combina o melhor do estilo e da funcionalidade. Com detalhes em couro e malha de alta qualidade, ela é perfeita para quem busca uma bolsa que seja tão elegante quanto prática. Seja para o trabalho ou lazer, esta bolsa irá impressionar.",
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 9,
         "nome": "Bolsa de Malha Boho Chic",
+        "resume": "Bolsa Boho Chic",        
         "valor": 85.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805498/dabru-atelie/dabruatelie_1706805495770_peb4eo.jpg",
         "sobre": "Uma bolsa com estilo boho chic em malha de alta qualidade.",
-        "tipo": "Boho Chic"
+        "tipo": "Boho Chic",
+        "descricao": "Esta bolsa boho chic é uma peça única que combina estilo e originalidade. Com malha de alta qualidade e um design elegante, ela é perfeita para quem busca uma bolsa que seja tão funcional quanto bonita. Seja para um passeio descontraído ou uma saída à noite, esta bolsa certamente chamará a atenção."                        ,
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 10,
         "nome": "Bolsa de Malha Retrô",
+        "resume": "Bolsa Retrô",
         "valor": 60.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805501/dabru-atelie/dabruatelie_1706805490172_eqwhgl.jpg",
         "sobre": "Uma bolsa com design retrô feita de malha.",
-        "tipo": "Retrô"
+        "tipo": "Retrô",
+        "descricao": "Esta bolsa retrô é uma peça atemporal que combina estilo e elegância. Com seu design clássico e malha de alta qualidade, ela é perfeita para quem busca um toque de sofisticação. Seja para um evento formal ou casual, esta bolsa certamente fará uma declaração de estilo."        ,
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
     {
         "id": 11,
         "nome": "Bolsa de Malha Ecológica",
+        "resume": "Bolsa Ecológica",
         "valor": 60.00,
         "data_publicacao": "2024-02-01",
         "imgLink": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1706805504/dabru-atelie/dabruatelie_1706805520066_vup0lu.jpg",
         "sobre": "Uma bolsa ecológica feita com malha sustentável.",
-        "tipo": "Retrô"
+        "tipo": "Retrô",
+        "descricao": "Esta bolsa ecológica é mais do que apenas uma peça de moda; é um símbolo de compromisso com a sustentabilidade. Feita com malha sustentável de alta qualidade, esta bolsa é uma escolha consciente para quem se preocupa com o meio ambiente. Além disso, seu design elegante e versátil a torna perfeita para qualquer ocasião."        ,
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
     },
 ];

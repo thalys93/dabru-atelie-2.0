@@ -58,7 +58,9 @@ function Product_Card(props: Product_Type) {
                         <div className='flex gap-5'>
                             <div className='flex gap-2'>
                                 <button className="btn btn-success" disabled>Adicionado</button>
-                                <button className="btn btn-outline-dark">Detalhes</button>
+                                <a href={`Produto/${props.id}/${props.nome}`}>
+                                    <button className="btn btn-outline-dark">Detalhes</button>
+                                </a>
                             </div>
                             <div>
                                 <button className='btn btn-outline-danger' onClick={() => handleRemoveToCart()} > X </button>

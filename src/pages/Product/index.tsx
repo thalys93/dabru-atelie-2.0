@@ -116,7 +116,11 @@ function Product() {
           imgLink={pr.imgLink}
           id={pr.id}
           data_publicacao={pr.data_publicacao}
-          tipo={pr.tipo} />
+          tipo={pr.tipo}
+          descricao={pr.descricao}
+          resume={pr.resume}
+          observacao={pr.observacao}
+          />
       ))
     )}
   </Container>;

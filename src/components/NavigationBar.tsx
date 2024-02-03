@@ -14,7 +14,7 @@ function NavigationBar() {
     useEffect(() => {  
         const interval = setInterval(() => {      
             const cart = localStorage.getItem('@carrinho')                 
-            if (cart !== '[]') {
+            if (cart !== '[]' && cart !== null) {
                 setCartItems(JSON.parse(cart as never))
                 setFullCart(true)
             } else {

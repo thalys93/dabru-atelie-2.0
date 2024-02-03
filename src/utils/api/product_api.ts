@@ -3,11 +3,19 @@ import { productData } from "./productData"
 export interface Product_Type {
     id: number | string,
     nome: string,
+    resume: string,
     valor: number,
     data_publicacao: string,
     imgLink: string,
     sobre: string,
+    descricao: string,
     tipo: string,
+    observacao: string,
+}
+
+export interface colorType {
+    id: number | string,
+    cor: string,
 }
 
 export const getProducts = async () => {
