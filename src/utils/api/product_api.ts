@@ -11,6 +11,7 @@ export interface Product_Type {
     descricao: string,
     tipo: string,
     observacao: string,
+    quantidade: number,
 }
 
 export interface colorType {

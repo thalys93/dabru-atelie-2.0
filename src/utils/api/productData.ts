@@ -9,7 +9,8 @@ export const productData = [
         "sobre": "Uma bolsa pequena feita à mão com malha artesanal.",
         "tipo": "Artesanal",
         "descricao": "Esta encantadora bolsa artesanal é perfeita para quem busca estilo e originalidade. Feita à mão com malha artesanal de alta qualidade, cada bolsa é única e reflete o trabalho artístico de seu artesão. Além de ser uma escolha elegante, esta bolsa é uma declaração de apoio ao artesanato tradicional.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@ export const productData = [
         "sobre": "Uma bolsa média feita à mão com malha de alta qualidade.",
         "tipo": "Feita à Mão",
         "descricao": "Esta deslumbrante bolsa média é uma peça única que combina estilo e artesanato. Feita à mão com malha de alta qualidade, cada detalhe é cuidadosamente trabalhado para garantir durabilidade e elegância. Perfeita para quem busca uma bolsa que seja tão funcional quanto bonita.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@ export const productData = [
         "sobre": "Uma bolsa ecológica feita com malha sustentável.",
         "tipo": "Ecológica",
         "descricao": "Esta bolsa ecológica é mais do que apenas uma peça de moda; é um símbolo de compromisso com a sustentabilidade. Feita com malha sustentável de alta qualidade, esta bolsa é uma escolha consciente para quem se preocupa com o meio ambiente. Além disso, seu design elegante e versátil a torna perfeita para qualquer ocasião.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 4,
@@ -45,7 +48,8 @@ export const productData = [
         "sobre": "Uma bolsa colorida com design único feita de malha.",
         "tipo": "Colorida",
         "descricao": "Esta vibrante bolsa colorida é uma explosão de alegria e estilo. Com seu design único e malha de alta qualidade, ela é perfeita para adicionar um toque de cor e vivacidade ao seu visual. Seja para um passeio descontraído ou uma saída à noite, esta bolsa certamente chamará a atenção.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 5,
@@ -57,7 +61,8 @@ export const productData = [
         "sobre": "Uma bolsa grande com detalhes artesanais em malha.",
         "tipo": "Artesanal",
         "descricao": "Esta deslumbrante bolsa artesanal grande é uma verdadeira declaração de estilo. Com seus detalhes artesanais e malha de alta qualidade, ela é espaçosa o suficiente para acomodar todos os seus itens essenciais com elegância. Seja para o trabalho ou lazer, esta bolsa irá impressionar.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 6,
@@ -69,7 +74,8 @@ export const productData = [
         "sobre": "Uma bolsa pequena feita à mão com malha de qualidade.",
         "tipo": "Feita à Mão",
         "descricao": "Esta encantadora bolsa pequena é uma peça única que combina estilo e artesanato. Feita à mão com malha de alta qualidade, cada detalhe é cuidadosamente trabalhado para garantir durabilidade e elegância. Perfeita para quem busca uma bolsa que seja tão funcional quanto bonita.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
 
     },
     {
@@ -82,7 +88,8 @@ export const productData = [
         "sobre": "Uma bolsa vintage com estilo clássico em malha.",
         "tipo": "Vintage",
         "descricao": "Esta bolsa vintage é uma peça atemporal que combina estilo e elegância. Com seu design clássico e malha de alta qualidade, ela é perfeita para quem busca um toque de sofisticação. Seja para um evento formal ou casual, esta bolsa certamente fará uma declaração de estilo.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 8,
@@ -94,7 +101,8 @@ export const productData = [
         "sobre": "Uma bolsa elegante com detalhes em couro e malha.",
         "tipo": "Couro",
         "descricao": "Esta elegante bolsa combina o melhor do estilo e da funcionalidade. Com detalhes em couro e malha de alta qualidade, ela é perfeita para quem busca uma bolsa que seja tão elegante quanto prática. Seja para o trabalho ou lazer, esta bolsa irá impressionar.",
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 9,
@@ -106,7 +114,8 @@ export const productData = [
         "sobre": "Uma bolsa com estilo boho chic em malha de alta qualidade.",
         "tipo": "Boho Chic",
         "descricao": "Esta bolsa boho chic é uma peça única que combina estilo e originalidade. Com malha de alta qualidade e um design elegante, ela é perfeita para quem busca uma bolsa que seja tão funcional quanto bonita. Seja para um passeio descontraído ou uma saída à noite, esta bolsa certamente chamará a atenção."                        ,
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 10,
@@ -118,7 +127,8 @@ export const productData = [
         "sobre": "Uma bolsa com design retrô feita de malha.",
         "tipo": "Retrô",
         "descricao": "Esta bolsa retrô é uma peça atemporal que combina estilo e elegância. Com seu design clássico e malha de alta qualidade, ela é perfeita para quem busca um toque de sofisticação. Seja para um evento formal ou casual, esta bolsa certamente fará uma declaração de estilo."        ,
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
     {
         "id": 11,
@@ -130,6 +140,7 @@ export const productData = [
         "sobre": "Uma bolsa ecológica feita com malha sustentável.",
         "tipo": "Retrô",
         "descricao": "Esta bolsa ecológica é mais do que apenas uma peça de moda; é um símbolo de compromisso com a sustentabilidade. Feita com malha sustentável de alta qualidade, esta bolsa é uma escolha consciente para quem se preocupa com o meio ambiente. Além disso, seu design elegante e versátil a torna perfeita para qualquer ocasião."        ,
-        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto."
+        "observacao": "As cores e padrões podem variar devido à natureza artesanal deste produto.",
+        "quantidade": 1
     },
 ];
