@@ -1,11 +1,12 @@
 import { Col, Container, Navbar, Row } from "react-bootstrap"
 import Product_SearchBar from "../../components/products/Product_SearchBar"
 // import Product_Sidebar from "../../components/products/Product_Sidebar"
-import React, {useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Product_Type, getProducts } from "../../utils/api/product_api";
 import Product_Card_placeholder from "../../components/products/Product_Card_placeholder";
 import Product_Sidebar_Placeholder from "../../components/products/Product_SideBar_Placeholder";
 import { placeholderData } from "../../components/products/placeholderData";
+import CartComponent from "../../components/CartComponent";
 // import Product_Card from "../../components/products/Product_Card";
 const Product_Sidebar = React.lazy(() => import('../../components/products/Product_Sidebar'))
 const Product_Card = React.lazy(() => import('../../components/products/Product_Card'))
@@ -86,7 +87,7 @@ function Product() {
       <h1 className="text-2xl text-gray font-bold select-none">Categorias</h1>
       <div className="line"></div>
       {loading ? (
-        <Product_Sidebar_Placeholder/>
+        <Product_Sidebar_Placeholder />
       ) : (
         Object.entries(productCounts).map(([tipo, count], i) => (
           <Product_Sidebar
@@ -102,10 +103,10 @@ function Product() {
   </Navbar>;
 
   const Products_List = <Container fluid className="flex sm:justify-center sm:items-center sm:mt-5 lg:mt-0 flex-col lg:flex-row flex-wrap gap-3">
-    {loading ? (   
+    {loading ? (
       placeholderData.map((i) => (
-        <Product_Card_placeholder key={i}/>
-      ))   
+        <Product_Card_placeholder key={i} />
+      ))
     ) : (
       products.map((pr, i) => (
         <Product_Card
@@ -120,7 +121,8 @@ function Product() {
           descricao={pr.descricao}
           resume={pr.resume}
           observacao={pr.observacao}
-          />
+          quantidade={pr.quantidade}
+        />
       ))
     )}
   </Container>;
@@ -140,7 +142,8 @@ function Product() {
           </div>
         </Col>
       </Row>
-    </Container>
+      <CartComponent />
+    </Container >
   )
 }
 
