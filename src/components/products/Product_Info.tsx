@@ -189,10 +189,10 @@ function product_information(pr: Product_Type, colors: colorType[], isAdded: boo
       `- 📋 Código: *#${product.id}*\n` +
       `- 🌐 Link: http://192.168.100.66:5173/Produto/${product.id}/${routeProductName}`
     )
-    // const phone = "555191597882";
-    const phone_dev = "555191485593"
+    const phone = "555191597882"; 
+    // const phone_dev = "555191485593"
     // const phone_dev_2 ="555193284665"
-    window.open(`https://api.whatsapp.com/send?phone=${phone_dev}&text=${message}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`, '_blank');
   }
 
   
