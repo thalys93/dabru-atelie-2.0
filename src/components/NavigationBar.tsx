@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { Badge, Container, Image, Nav, Navbar } from "react-bootstrap"
-import { TiShoppingCart } from "react-icons/ti"
+import { Container, Image, Nav, Navbar } from "react-bootstrap"
 
 function NavigationBar() {
     const routeName = window.location.pathname
@@ -8,21 +7,7 @@ function NavigationBar() {
     const [isAboutRoute, setIsAboutRoute] = useState(false)
     const [isProductRoute, setIsProductRoute] = useState(false)
     const [isContactRoute, setIsContactRoute] = useState(false)
-    const [fullCart, setFullCart] = useState(false)
-    const [cartItems, setCartItems] = useState([])
 
-    useEffect(() => {  
-        const interval = setInterval(() => {      
-            const cart = localStorage.getItem('@carrinho')                 
-            if (cart !== '[]' && cart !== null) {
-                setCartItems(JSON.parse(cart as never))
-                setFullCart(true)
-            } else {
-                setFullCart(false)
-            }            
-        }, 950)
-        return () => clearInterval(interval)
-    }, [fullCart])
 
     const checkRouteName = (routeName: string) => {
         if (routeName === '/Sobre') {
@@ -49,17 +34,7 @@ function NavigationBar() {
                 <Navbar.Brand href="/" className="transition-all">
                     <Image src="/img/logo_branco.png" width={50} roundedCircle />
                 </Navbar.Brand>
-                <button className="bg-white p-1 rounded-full">
-                    {fullCart ? (
-                        <div className="flex flex-row gap-1">
-                            <TiShoppingCart className="text-gray" size={20} />
-                            <Badge bg="danger" className="text-white">{cartItems.length}</Badge>
-                        </div>
-                    ) : (
-                        <TiShoppingCart className="text-gray" size={20} />
-                    )}
-                </button>
-
+                
                 <Navbar.Toggle aria-controls="navbar-nav" className="border-0 active:border-0" id="navbar-nav">
                     <i className='bi bi-list text-PJwhite' />
                 </Navbar.Toggle>
