@@ -11,11 +11,11 @@ function Index() {
       </header>
 
       <section>
-        <Outlet />
+        <Outlet />    
       </section>
 
       <footer>
-        <FooterBar/>
+        <FooterBar />
       </footer>
     </>
   )
