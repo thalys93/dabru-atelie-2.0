@@ -1,10 +1,11 @@
 
 import { Card, Placeholder } from 'react-bootstrap';
+export const imgPlaceholder = "/img/placeholder.jpg"
 
 function Product_Card_placeholder() {    
     return (
         <Card style={{ width: '20rem' }}>
-            <Card.Img variant="top" src='./img/placeholder.jpg' className='h-72 object-cover animate-pulse' />
+            <Card.Img variant="top" src={imgPlaceholder} className='h-72 object-cover animate-pulse' />
             <Card.Body>
                 <Placeholder as={Card.Title} animation='wave'>
                     <Placeholder xs={6} />

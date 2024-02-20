@@ -54,7 +54,7 @@ function Product() {
       let filteredProducts = [...originalProducts];
 
       if (filterType !== '') {
-        filteredProducts = filteredProducts.filter(pr => pr.tipo === filterType);
+        filteredProducts = filteredProducts.filter(pr => pr.details.tipo === filterType);
       }
 
       if (filterText !== '') {
@@ -69,10 +69,10 @@ function Product() {
 
   useEffect(() => {
     const groupedProducts = originalProducts.reduce((acc, curr) => {
-      if (acc[curr.tipo]) {
-        acc[curr.tipo] += 1;
+      if (acc[curr.details.tipo]) {
+        acc[curr.details.tipo] += 1;
       } else {
-        acc[curr.tipo] = 1;
+        acc[curr.details.tipo] = 1;
       }
       return acc;
     }, {} as { [key: string]: number });
@@ -111,17 +111,14 @@ function Product() {
       products.map((pr, i) => (
         <Product_Card
           key={i}
-          nome={pr.nome}
-          valor={pr.valor}
-          sobre={pr.sobre}
-          imgLink={pr.imgLink}
           id={pr.id}
+          nome={pr.nome}
+          details={pr.details}
+          valor={pr.valor}
           data_publicacao={pr.data_publicacao}
-          tipo={pr.tipo}
           descricao={pr.descricao}
-          resume={pr.resume}
-          observacao={pr.observacao}
           quantidade={pr.quantidade}
+          total={pr.total}                  
         />
       ))
     )}

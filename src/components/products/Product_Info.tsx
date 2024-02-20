@@ -5,10 +5,6 @@ import { BsBackpack } from "react-icons/bs";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { CiRuler, CiShoppingBasket, CiBoxes } from "react-icons/ci";
 import { colorData } from "../../utils/api/colorData";
-
-
-
-
 function Product_Info() {
 
   const routeNameID = window.location.pathname.split('/')[2]
@@ -17,6 +13,7 @@ function Product_Info() {
   const [allItems, setAllItems] = useState([] as Product_Type[])
   const [colors, setColors] = useState([] as colorType[])
   const [isAdded, setIsAdded] = useState(false)
+  const [disponibility, setDisponibility] = useState("")
 
   const truncateResume = (resume: string) => {
     if (resume.length > 20) {
@@ -39,6 +36,19 @@ function Product_Info() {
   }, [colors])
 
   useEffect(() => {
+    const checkDelivery = async () => {
+      const productMap = product.map((product) => product.details.delivery)
+      if (productMap.includes(false)) {
+        setDisponibility("Sim")
+      } else {
+        setDisponibility("Não")
+      }
+    }
+
+    checkDelivery();
+  }, [product])
+
+  useEffect(() => {
     const interval = setInterval(() => {
       const cart = localStorage.getItem('@carrinho')
       if (cart) {
@@ -59,7 +69,7 @@ function Product_Info() {
 
         const filteredProduct = productRes?.find((product: Product_Type) => product.id === parseInt(routeNameID, 10));
         if (allItems) {
-          allItems.map((pr) => pr.resume = truncateResume(pr.nome))
+          allItems.map((pr) => pr.details.resume = truncateResume(pr.nome))
         }
 
         if (filteredProduct) {
@@ -76,59 +86,61 @@ function Product_Info() {
   }, [routeNameID, allItems]);
 
   return (
-    <Container>
-      {product.map((pr) => (
-        <Row key={pr.id} className="bg-PJwhite p-2 lg:p-5 mt-4 gap-3">
-          <Col sm>
-            <Row>
-              <div className="flex flex-col lg:flex-row bg-white rounded-b-lg items-center">
-                <Col className="flex flex-col justify-center items-center">
-                  <h4 className="font-bebas text-xl text-gray mt-2 mb-2"> Detalhes da Bolsa </h4>
-                  <Figure className="border-2 border-opacity-15 border-gray rounded-lg shadow-lg shadow-gray mb-2">
-                    <Figure.Image src={pr.imgLink || '/img/placeholder.jpg'} className="h-80 object-cover rounded-t-lg" />
-                  </Figure>
-                </Col>
-                {product_details(pr)}
-              </div>
-            </Row>
-          </Col>
-          <Col sm>
-            {product_information(pr, colors as never, isAdded, routeProductName)}
-          </Col>
-        </Row>
-      ))}
-      <Row>
-        <Col className="bg-PJwhite">
-          <h4 className="font-bebas text-xl text-gray mt-2 mb-2 text-center"> Produtos Relacionados </h4>
-          <hr />
-          <div className="flex flex-row gap-2 items-center justify-center mt-2 bg-white p-4 overflow-x-auto animate__animated animate__fadeIn">
-            {allItems.map((pr, i) => (
-              <Row key={i}>
-                <div className="flex-shrink-0 w-32 lg:w-40 mr-3">
-                  <Card className="hover:scale-95 transition-transform duration-100">
-                    <Card.Img variant="top" src={pr.imgLink || '/img/placeholder.jpg'} alt={pr.nome} className="h-40 object-cover" />
-                    <Card.Body className="flex flex-col justify-center items-center">
-                      <Card.Title className="font-abel text-lg font-light select-none">
-                        {pr.resume}
-                      </Card.Title>
-                      <a href={`/Produto/${pr.id}/${pr.nome}`}>
-                        <button className="btn btn-primary hover:scale-95 transition-transform duration-100"> Ver Mais </button>
-                      </a>
-                    </Card.Body>
-                  </Card>
+    <>                          
+      <Container>
+        {product.map((pr) => (
+          <Row key={pr.id} className="bg-PJwhite p-2 lg:p-5 mt-4 gap-3">
+            <Col sm>
+              <Row>
+                <div className="flex flex-col lg:flex-row bg-white rounded-b-lg items-center">
+                  <Col className="flex flex-col justify-center items-center">
+                    <h4 className="font-bebas text-xl text-gray mt-2 mb-2"> Detalhes da Bolsa </h4>
+                    <Figure className="border-2 border-opacity-15 border-gray rounded-lg shadow-lg shadow-gray mb-2">
+                      <Figure.Image src={pr.details.imgLink || '/img/placeholder.jpg'} className="h-80 object-cover rounded-t-lg" />
+                    </Figure>
+                  </Col>
+                  {product_details(pr, disponibility as string)}
                 </div>
               </Row>
-            ))}
-          </div>
-        </Col>
-      </Row>
-    </Container>
+            </Col>
+            <Col sm>
+              {product_information(pr, colors as never, isAdded, routeProductName)}
+            </Col>
+          </Row>
+        ))}
+        <Row>
+          <Col className="bg-PJwhite">
+            <h4 className="font-bebas text-xl text-gray mt-2 mb-2 text-center"> Produtos Relacionados </h4>
+            <hr />
+            <div className="flex flex-row gap-2 items-center justify-center mt-2 bg-white p-4 overflow-x-auto animate__animated animate__fadeIn">
+              {allItems.map((pr, i) => (
+                <Row key={i}>
+                  <div className="flex-shrink-0 w-32 lg:w-40 mr-3">
+                    <Card className="hover:scale-95 transition-transform duration-100">
+                      <Card.Img variant="top" src={pr.details.imgLink || '/img/placeholder.jpg'} alt={pr.nome} className="h-40 object-cover" />
+                      <Card.Body className="flex flex-col justify-center items-center">
+                        <Card.Title className="font-abel text-lg font-light select-none">
+                          {pr.details.resume}
+                        </Card.Title>
+                        <a href={`/Produto/${pr.id}/${pr.nome}`}>
+                          <button className="btn btn-primary hover:scale-95 transition-transform duration-100"> Ver Mais </button>
+                        </a>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </Row>
+              ))}
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 
 export default Product_Info
 
-function product_details(pr: Product_Type) {
+function product_details(pr: Product_Type, disponibility: string) {
   return (
     <div className="flex flex-col gap-3 justify-start">
       <div className="flex flex-row gap-2 items-center p-2">
@@ -142,12 +154,12 @@ function product_details(pr: Product_Type) {
       <div className="flex flex-row gap-2 justify-between items-center">
         <div className="flex flex-row gap-1">
           <CiRuler size={20} />
-          <span> Dim X : 5cm</span>
+          <span> Dim X : {pr.details.dimX} cm</span>
         </div>
 
         <div className="flex flex-row gap-1">
           <CiRuler size={20} />
-          <span> Dim Y : 5cm</span>
+          <span> Dim Y : {pr.details.dimY} cm</span>
         </div>
       </div>
 
@@ -156,12 +168,12 @@ function product_details(pr: Product_Type) {
       <div className="flex flex-row gap-2 justify-between items-center">
         <div className="flex flex-row gap-1">
           <CiBoxes size={20} />
-          <span> Tipo : {pr.tipo}</span>
+          <span> Tipo : {pr.details.tipo}</span>
         </div>
 
         <div className="flex flex-row gap-1">
           <CiShoppingBasket size={20} />
-          <span> Pronta : Sim </span>
+          <span> Pronta : {disponibility} </span>
         </div>
       </div>
 
@@ -185,27 +197,27 @@ function product_information(pr: Product_Type, colors: colorType[], isAdded: boo
       `Olá Tudo bem? , gostaria de saber sobre o produto\n` +
       "\n" +
       `- 📄 Nome: *${product.nome}*\n` +
-      `- 💰 Valor: *${product.valor.toFixed(2)} Reais*\n` +
+      `- 💰 Valor: *${product.total.toFixed(2)} Reais*\n` +
       `- 📋 Código: *#${product.id}*\n` +
       `- 🌐 Link: http://192.168.100.66:5173/Produto/${product.id}/${routeProductName}`
     )
-    const phone = "555191597882"; 
+    const phone = "555191597882";
     // const phone_dev = "555191485593"
     // const phone_dev_2 ="555193284665"
     window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`, '_blank');
   }
 
-  
+
   const handleAddToCart = () => {
     const cart = localStorage.getItem('@carrinho')
     if (cart) {
-        const cartItems = JSON.parse(cart)
-        cartItems.push(pr)
-        localStorage.setItem('@carrinho', JSON.stringify(cartItems))
+      const cartItems = JSON.parse(cart)
+      cartItems.push(pr)
+      localStorage.setItem('@carrinho', JSON.stringify(cartItems))
     } else {
-        localStorage.setItem('@carrinho', JSON.stringify([pr]))
+      localStorage.setItem('@carrinho', JSON.stringify([pr]))
     }
-}
+  }
 
   return (
     <Row className="flex flex-col bg-white rounded-b-lg items-center">
@@ -221,10 +233,11 @@ function product_information(pr: Product_Type, colors: colorType[], isAdded: boo
           <h4 className="font-bebas text-xl text-gray mt-2 mb-2 text-center"> Cores Disponíveis </h4>
           <hr />
 
+          {/* Atenção, feature ainda em testes de usabilidade */}
           <ul className="p-2 flex flex-row flex-wrap items-center gap-3 justify-center">
             {colors.map((color, i) => (
               <li key={i} className={`aspect-square w-16 rounded-full shadow-md hover:scale-95 transition-transform duration-200`}
-                style={{ backgroundColor: color.cor, boxShadow: "0 2px 2px 2px " + color.cor }}
+                style={{ backgroundColor: `${color.cor}`, boxShadow: "0 2px 2px 2px " + color.cor }}
               ></li>
             ))}
           </ul>
@@ -233,7 +246,7 @@ function product_information(pr: Product_Type, colors: colorType[], isAdded: boo
             <h4 className="font-bebas text-xl text-gray mt-2 mb-2 text-center"> Observações </h4>
             <hr />
             <p className="font-abel text-lg font-light select-none p-2 text-center">
-              {pr.observacao}
+              {pr.details.observacao}
             </p>
           </div>
         </div>

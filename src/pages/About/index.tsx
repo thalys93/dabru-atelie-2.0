@@ -1,11 +1,9 @@
 import { Col, Container, Figure, Row } from "react-bootstrap";
 
-export const userProfileLink = "/img/profile_default_photo.jpg"
+export const userProfileLink = "/img/profile_default_photo_alt.jpg"
 export const boldClass = "hover:text-amber-100 transition-all duration-200"
 
-export function About() {  
-
-  
+export function About() {    
   return (
     <Container>
       <Row>

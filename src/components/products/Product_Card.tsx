@@ -2,6 +2,7 @@
 import { Card } from 'react-bootstrap';
 import { Product_Type } from '../../utils/api/product_api';
 import { useEffect, useState } from 'react';
+import { imgPlaceholder } from './Product_Card_placeholder';
 
 function Product_Card(props: Product_Type) {
     const [isAdded, setIsAdded] = useState(false)
@@ -40,16 +41,27 @@ function Product_Card(props: Product_Type) {
         return () => clearInterval(interval)
     }, [props])
 
+    useEffect(() => {
+        const checkIMG = () => {
+            if (props.details.imgLink === undefined || props.details.imgLink === "" || props.details.imgLink === null) {
+                props.details.imgLink = imgPlaceholder
+            }            
+        }
+        checkIMG()       
+    }, [props])
+
     return (
-        <Card style={{ width: '20rem' }}>
-            <Card.Img variant="top" src={props.imgLink} className='h-72 object-cover' />
+        <Card style={{ width: '20rem' }} className='animate__animated animate__fadeIn'>
+            <Card.Img variant="top" src={props.details.imgLink || imgPlaceholder} className='h-72 object-cover' />
             <Card.Body>
                 <Card.Title>{props.nome}</Card.Title>
                 <Card.Text>
-                    {props.sobre}
+                    {props.details.sobre}
                 </Card.Text>
                 <Card.Text>
-                    Preço: {props.valor} R$
+                    <div className='text-teal-500 font-abel font-semibold text-lg'>
+                        Preço: {props.valor} R$
+                    </div>
                 </Card.Text>
             </Card.Body>
             <Card.Footer>

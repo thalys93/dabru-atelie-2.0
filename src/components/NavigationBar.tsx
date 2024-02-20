@@ -7,7 +7,8 @@ function NavigationBar() {
     const [isAboutRoute, setIsAboutRoute] = useState(false)
     const [isProductRoute, setIsProductRoute] = useState(false)
     const [isContactRoute, setIsContactRoute] = useState(false)
-
+    const [imgSrc, setImgSrc] = useState('/img/logo_branco.png')
+    const [hovered, setHovered] = useState(false)
 
     const checkRouteName = (routeName: string) => {
         if (routeName === '/Sobre') {
@@ -27,12 +28,22 @@ function NavigationBar() {
         checkRouteName(routeName)
     }, [routeName])
 
+    const handleMouseIN = () => {
+        setImgSrc('/img/logo_invertido.png')
+        setHovered(true)
+    }
+
+    const handleMouseOUT = () => {
+        setHovered(false)
+        setImgSrc('/img/logo_branco.png')
+    }
+
 
     return (
         <Navbar expand="lg" className="bg-gray">
             <Container>
-                <Navbar.Brand href="/" className="transition-all">
-                    <Image src="/img/logo_branco.png" width={50} roundedCircle />
+                <Navbar.Brand href="/" className={!hovered? "transition-all animate__animated" : "animate__animated animate__fadeIn transition-all"}>
+                    <Image src={imgSrc} width={50} roundedCircle onMouseOver={handleMouseIN} onMouseOut={handleMouseOUT}/>
                 </Navbar.Brand>
                 
                 <Navbar.Toggle aria-controls="navbar-nav" className="border-0 active:border-0" id="navbar-nav">

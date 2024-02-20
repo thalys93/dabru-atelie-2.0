@@ -3,15 +3,23 @@ import { productData } from "./productData"
 export interface Product_Type {
     id: number | string,
     nome: string,
-    resume: string,
+    details: ProductDetails,
     valor: number,
     data_publicacao: string,
+    descricao: string,
+    quantidade: number,
+    total: number,
+}
+
+interface ProductDetails {    
+    resume: string,  
     imgLink: string,
     sobre: string,
-    descricao: string,
-    tipo: string,
     observacao: string,
-    quantidade: number,
+    tipo:string,
+    delivery: boolean,
+    dimX: number,
+    dimY: number,    
 }
 
 export interface colorType {
