@@ -10,7 +10,7 @@ function Index() {
         <NavigationBar />
       </header>
 
-      <section>        
+      <section>
         <Outlet />    
       </section>
 
